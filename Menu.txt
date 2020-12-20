@@ -1,0 +1,4 @@
+ItemNO			Dishes			Prices
+1			biyani			300
+2			zinger			230
+3			roll			90
