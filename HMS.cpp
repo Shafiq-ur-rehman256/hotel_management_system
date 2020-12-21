@@ -757,9 +757,6 @@ int main()
     System s;
     cout << endl;
     cout << endl;
-    cout << endl;
-    cout << endl;
-    cout << endl;
     cout << "\t\t\t\t\t*****Hotel Management System*****";
     cout << endl;
     s.process();
