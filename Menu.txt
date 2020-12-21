@@ -1,4 +1,6 @@
 ItemNO			Dishes			Prices
-1			biyani			300
-2			zinger			230
+1			biryani			200
+2			kimma			250
 3			roll			90
+4			zinger			230
+5			broast			250

@@ -1,0 +1,2 @@
+Room-no		Room-category		Name		Phone-No		Addresss		Leave-date		Issue-date
+1			ac				shafiq			03442078398			A-11				22/01/2021			21/12/2020

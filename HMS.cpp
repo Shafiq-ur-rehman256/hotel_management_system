@@ -689,6 +689,7 @@ public:
                 cout << "Press Enter to continue......";
                 getch();
                 system("cls");
+                break;
             case 5:
                 system("cls");
                 int choice;
@@ -735,12 +736,14 @@ public:
                 cout << "Press enter to continue.....";
                 getch();
                 system("cls");
+                break;
             case 7:
                 system("cls");
                 showBill();
                 cout << "Press enter to continue.....";
                 getch();
                 system("cls");
+                break;
             default:
                 exit(0);
                 break;
