@@ -1,6 +1,0 @@
-Name: shafiq
-Number: 03442078398
-Address: A-11
-Issue-date: 21/12/2020
-Leave-date : 22/01/2021
-Amount: 38400
