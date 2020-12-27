@@ -21,10 +21,10 @@ public:
     void getRoomInfo()
     {
         system("cls");
-        cout << "We have total number of room 50 including ordinary , luxuary and royal rooms" << endl;
+        cout << "Enter Room Information" << endl;
         cout << "Enter Room NO: ";
         cin >> roomNo;
-        cout << "Enter Room Category: ";
+        cout << "Enter Room Category(AC , Non-Ac): ";
         cin >> roomcategory;
     }
     void roomBooking()
@@ -57,7 +57,7 @@ public:
             checkInRecords >> check2;
             checkInRecords >> check3;
             checkInRecords >> check4;
-
+            checkInRecords >> check5;
             checkInRecords >> check6;
             checkInRecords >> check7;
         }
@@ -83,7 +83,7 @@ public:
     void checkIn()
     {
         // file pending
-        time_t t = time(NULL);
+        time_t t = time(NULL); // ctime
         tm *tPtr = localtime(&t);
         roomIssueData = to_string(tPtr->tm_mday) + "/" + to_string((tPtr->tm_mon) + 1) + "/" + to_string((tPtr->tm_year) + 1900);
 
@@ -96,7 +96,7 @@ public:
     }
     void checkout()
     {
-        cout << "Enter Room Leave Data (*GTM Format*):";
+        cout << "Enter Room Leave Data (dd/mm/yy):";
         cin >> roomLeaveData;
         ofstream LeaveRoom;
         LeaveRoom.open("Record.txt", ios ::app);
@@ -123,7 +123,6 @@ public:
             cout << "\xdb";
             Sleep(500);
         }
-
         cout << "\nYour Room Is Clean Now!";
     }
 };
@@ -194,6 +193,11 @@ public:
                 }
             }
         }
+        else
+        {
+            cout << "File Not found!!!!" << endl;
+        }
+
         myReadFile.close();
         cout << endl;
         cout << "Enter Item no to Order food!! >> ";
@@ -323,7 +327,10 @@ public:
                     }
                 }
             }
-
+            // else
+            // {
+            //     cout << "Directory not found!!" << endl;
+            // }
             closedir(directory); //close directory....
 
             if (result == false)
@@ -342,7 +349,6 @@ public:
                 hotelRecord << "Leave-date";
                 hotelRecord << "\t\t\t";
                 hotelRecord << "Issue-date";
-
                 hotelRecord << endl;
                 hotelRecord.close();
             }
@@ -448,17 +454,16 @@ public:
         ofstream NewRecord;
         NewRecord.open("Record1.txt");
         DltRecord >> roomNo;
-        cout << roomNo;
         DltRecord >> roomcategory;
         DltRecord >> Guestname;
         DltRecord >> phoneNumber;
         DltRecord >> homeAddress;
         DltRecord >> roomLeaveData;
         DltRecord >> roomIssueData;
-        cout << "check" << endl;
+        
         while (!DltRecord.eof())
         {
-            cout << "check" << endl;
+            
 
             if (check == roomNo)
             {
@@ -637,10 +642,10 @@ public:
         getch();
         showRecords.close();
     }
-    
+
     void process()
     {
-        
+
         int loops = 0;
         int options;
         while (loops == 0)
@@ -689,7 +694,6 @@ public:
                 cout << "Press Enter to continue......";
                 getch();
                 system("cls");
-                break;
             case 5:
                 system("cls");
                 int choice;
@@ -736,7 +740,6 @@ public:
                 cout << "Press enter to continue.....";
                 getch();
                 system("cls");
-                break;
             case 7:
                 system("cls");
                 showBill();
@@ -755,6 +758,9 @@ public:
 int main()
 {
     System s;
+    cout << endl;
+    cout << endl;
+    cout << endl;
     cout << endl;
     cout << endl;
     cout << "\t\t\t\t\t*****Hotel Management System*****";
